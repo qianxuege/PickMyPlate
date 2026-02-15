@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     flex: 1,
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
     color: '#000',
     textAlign: 'center',
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   sectionTitle: {
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '600',
     color: '#000',
     marginBottom: 12,
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
     borderColor: '#e5e7eb',
   },
   chipText: {
-    fontSize: 14,
+    fontSize: 16,
   },
   chipTextActive: {
     color: '#fff',

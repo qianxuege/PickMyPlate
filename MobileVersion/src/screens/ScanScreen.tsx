@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     flex: 1,
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
     color: '#000',
     textAlign: 'center',
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   cameraPlaceholderText: {
-    fontSize: 14,
+    fontSize: 16,
     color: '#6b7280',
   },
   controls: {
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   },
   uploadLink: {},
   uploadLinkText: {
-    fontSize: 14,
+    fontSize: 16,
     color: '#374151',
     textDecorationLine: 'underline',
   },

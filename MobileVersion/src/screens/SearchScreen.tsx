@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#e5e7eb',
     backgroundColor: '#f9fafb',
-    fontSize: 14,
+    fontSize: 16,
     color: '#000',
   },
   clearBtn: {
@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   sectionTitle: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: '700',
     color: '#374151',
     marginBottom: 12,
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   recentText: {
-    fontSize: 14,
+    fontSize: 16,
     color: '#374151',
   },
   cardWrap: {
@@ -233,7 +233,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   emptyText: {
-    fontSize: 14,
+    fontSize: 16,
     color: '#6b7280',
   },
 });

@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     marginRight: 12,
   },
   headerTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
     color: '#000',
   },
@@ -149,12 +149,12 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   dishName: {
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '700',
     color: '#000',
   },
   restaurant: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#374151',
   },
   priceRow: {
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   price: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: '600',
     color: '#000',
   },
@@ -182,14 +182,14 @@ const styles = StyleSheet.create({
     paddingVertical: 80,
   },
   emptyTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
     color: '#000',
     marginBottom: 8,
     textAlign: 'center',
   },
   emptySub: {
-    fontSize: 14,
+    fontSize: 16,
     color: '#374151',
     marginBottom: 32,
     textAlign: 'center',

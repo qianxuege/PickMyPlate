@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     borderColor: '#e5e7eb',
   },
   label: {
-    fontSize: 14,
+    fontSize: 16,
   },
   labelActive: {
     color: '#fff',

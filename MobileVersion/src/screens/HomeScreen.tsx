@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     paddingVertical: 32,
   },
   greeting: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: '700',
     color: '#000',
     marginBottom: 40,
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
   recentTitle: {
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '600',
     color: '#000',
     marginBottom: 16,
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   recentText: {
-    fontSize: 14,
+    fontSize: 16,
     color: '#374151',
   },
 });

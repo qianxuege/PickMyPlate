@@ -30,9 +30,8 @@ export function ResultsScreen({ navigation }: Props) {
   const topPicks = resultsDishes.filter((d) => d.section === 'top');
   const other = resultsDishes.filter((d) => d.section === 'other');
 
-  const selectedFilters = allResultFilters.filter((f) => selectedResultFilters.includes(f));
   const unselectedFilters = allResultFilters.filter((f) => !selectedResultFilters.includes(f));
-  const orderedFilters = [...selectedFilters, ...unselectedFilters];
+  const orderedFilters = [...selectedResultFilters, ...unselectedFilters];
 
   const openDish = (dish: Dish) => {
     setSelectedDish(dish);
@@ -170,7 +169,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 0,
     right: 0,
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
     color: '#000',
     textAlign: 'center',
@@ -206,7 +205,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   sectionTitle: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: '700',
     color: '#374151',
     marginBottom: 8,

@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     flex: 1,
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
     color: '#000',
     textAlign: 'center',
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   imagePlaceholderText: {
-    fontSize: 14,
+    fontSize: 16,
     color: '#6b7280',
   },
   titleRow: {
@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   dishName: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: '700',
     color: '#000',
     flex: 1,
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   price: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
     color: '#000',
   },
@@ -211,11 +211,11 @@ const styles = StyleSheet.create({
     borderColor: '#e5e7eb',
   },
   tagText: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#000',
   },
   summary: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#374151',
     lineHeight: 20,
     marginBottom: 16,
@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   blockTitle: {
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '600',
     color: '#000',
     marginBottom: 8,
@@ -235,12 +235,12 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   bullet: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#374151',
     marginRight: 8,
   },
   bulletText: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#374151',
     flex: 1,
   },

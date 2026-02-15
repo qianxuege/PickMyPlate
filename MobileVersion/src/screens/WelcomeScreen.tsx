@@ -48,13 +48,13 @@ const styles = StyleSheet.create({
     gap: 24,
   },
   title: {
-    fontSize: 32,
+    fontSize: 34,
     fontWeight: '700',
     color: '#000',
     textAlign: 'center',
   },
   tagline: {
-    fontSize: 18,
+    fontSize: 20,
     color: '#374151',
     textAlign: 'center',
   },

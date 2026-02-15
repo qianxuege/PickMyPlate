@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   headerTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
     color: '#000',
   },
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     marginBottom: 32,
   },
   sectionTitle: {
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '600',
     color: '#000',
     marginBottom: 12,
@@ -162,12 +162,12 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   userName: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
     color: '#000',
   },
   userEmail: {
-    fontSize: 14,
+    fontSize: 16,
     color: '#374151',
   },
   preferencesBox: {
@@ -179,11 +179,11 @@ const styles = StyleSheet.create({
   },
   prefRow: {},
   prefLabel: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#374151',
   },
   prefValue: {
-    fontSize: 14,
+    fontSize: 16,
     color: '#000',
     marginTop: 4,
   },
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
     marginTop: 12,
   },
   outlineButtonText: {
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '600',
     color: '#000',
   },
@@ -214,11 +214,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   savedRowText: {
-    fontSize: 14,
+    fontSize: 16,
     color: '#000',
   },
   savedRowArrow: {
-    fontSize: 18,
+    fontSize: 20,
     color: '#000',
   },
   deleteWrap: {
@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
     borderTopColor: '#e5e7eb',
   },
   deleteText: {
-    fontSize: 14,
+    fontSize: 16,
     color: '#374151',
   },
 });

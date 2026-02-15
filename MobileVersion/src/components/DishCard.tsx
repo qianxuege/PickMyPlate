@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     padding: 4,
   },
   name: {
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '700',
     color: '#000',
     flex: 1,
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   price: {
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '600',
     color: '#000',
   },
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     opacity: 1,
   },
   summary: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#374151',
   },
 });

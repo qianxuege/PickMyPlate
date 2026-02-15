@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     paddingVertical: 48,
   },
   title: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: '700',
     color: '#000',
     marginBottom: 32,
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     marginBottom: 32,
   },
   sectionTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
     color: '#000',
     marginBottom: 16,
@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
     borderColor: '#e5e7eb',
   },
   chipText: {
-    fontSize: 14,
+    fontSize: 16,
   },
   chipTextActive: {
     color: '#fff',

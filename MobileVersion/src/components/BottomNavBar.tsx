@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   tabLabel: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#6b7280',
   },
   tabLabelActive: {
