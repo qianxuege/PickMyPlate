@@ -27,6 +27,8 @@ export default function App() {
             screenOptions={{
               headerShown: false,
               contentStyle: { backgroundColor: '#fff' },
+              animation: 'fade',
+              gestureEnabled: false,
             }}
           >
             <Stack.Screen name="Welcome" component={WelcomeScreen} />

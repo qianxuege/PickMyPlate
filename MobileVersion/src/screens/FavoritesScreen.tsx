@@ -1,25 +1,31 @@
 import React from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { PrimaryButton } from '../components/PrimaryButton';
 import { BottomNavBar } from '../components/BottomNavBar';
 import { useApp } from '../context/AppContext';
-import { favoriteDishesList } from '../data/mockDishes';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/types';
+import { Dish } from '../types';
 
 type Props = {
   navigation: NativeStackNavigationProp<RootStackParamList, 'Favorites'>;
 };
 
 export function FavoritesScreen({ navigation }: Props) {
-  const { activeTab, setActiveTab } = useApp();
-  const hasFavorites = favoriteDishesList.length > 0;
+  const { activeTab, setActiveTab, favoriteDishes, toggleFavorite } = useApp();
+  const hasFavorites = favoriteDishes.length > 0;
 
   return (
     <SafeAreaView style={styles.container} edges={['top', 'bottom']}>
       <View style={styles.header}>
+        <TouchableOpacity
+          style={styles.backBtn}
+          onPress={() => navigation.goBack()}
+        >
+          <Ionicons name="chevron-back" size={22} color="#000" />
+        </TouchableOpacity>
         <Text style={styles.headerTitle}>Favorites</Text>
       </View>
 
@@ -30,12 +36,12 @@ export function FavoritesScreen({ navigation }: Props) {
       >
         {hasFavorites ? (
           <View style={styles.list}>
-            {favoriteDishesList.map((dish, i) => (
-              <View key={i} style={styles.card}>
+            {favoriteDishes.map((dish: Dish, i: number) => (
+              <View key={`${dish.name}-${i}`} style={styles.card}>
                 <View style={styles.thumb} />
                 <View style={styles.cardContent}>
                   <Text style={styles.dishName}>{dish.name}</Text>
-                  <Text style={styles.restaurant}>{dish.restaurant}</Text>
+                  <Text style={styles.restaurant}>{dish.restaurant || 'Noodlehead'}</Text>
                   <View style={styles.priceRow}>
                     <Text style={styles.price}>{dish.price}</Text>
                     {dish.spiceLevel > 0 && (
@@ -52,7 +58,13 @@ export function FavoritesScreen({ navigation }: Props) {
                     )}
                   </View>
                 </View>
-                <Ionicons name="heart" size={20} color="#000" />
+                <TouchableOpacity
+                  onPress={() => toggleFavorite(dish)}
+                  hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+                  style={styles.heartButton}
+                >
+                  <Ionicons name="heart" size={20} color="#000" />
+                </TouchableOpacity>
               </View>
             ))}
           </View>
@@ -92,8 +104,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderBottomWidth: 1,
     borderBottomColor: '#e5e7eb',
-    justifyContent: 'center',
+    flexDirection: 'row',
     alignItems: 'center',
+    paddingHorizontal: 16,
+  },
+  backBtn: {
+    width: 32,
+    height: 32,
+    borderWidth: 1,
+    borderColor: '#000',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 12,
   },
   headerTitle: {
     fontSize: 16,
@@ -149,6 +171,9 @@ const styles = StyleSheet.create({
   spiceRow: {
     flexDirection: 'row',
     gap: 2,
+  },
+  heartButton: {
+    padding: 4,
   },
   empty: {
     flex: 1,

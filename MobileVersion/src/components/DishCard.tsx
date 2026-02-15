@@ -8,9 +8,11 @@ interface DishCardProps {
   price: string;
   spiceLevel: number;
   onPress?: () => void;
+  isFavorited?: boolean;
+  onHeartPress?: () => void;
 }
 
-export function DishCard({ name, summary, price, spiceLevel, onPress }: DishCardProps) {
+export function DishCard({ name, summary, price, spiceLevel, onPress, isFavorited, onHeartPress }: DishCardProps) {
   return (
     <TouchableOpacity
       style={styles.card}
@@ -23,7 +25,17 @@ export function DishCard({ name, summary, price, spiceLevel, onPress }: DishCard
           <Text style={styles.name} numberOfLines={1}>
             {name}
           </Text>
-          <Ionicons name="heart-outline" size={20} color="#374151" />
+          <TouchableOpacity
+            onPress={onHeartPress}
+            hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+            style={styles.heartButton}
+          >
+            <Ionicons
+              name={isFavorited ? 'heart' : 'heart-outline'}
+              size={20}
+              color={isFavorited ? '#000' : '#374151'}
+            />
+          </TouchableOpacity>
         </View>
         <View style={styles.row2}>
           <Text style={styles.price}>{price}</Text>
@@ -70,6 +82,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: 8,
+  },
+  heartButton: {
+    padding: 4,
   },
   name: {
     fontSize: 14,

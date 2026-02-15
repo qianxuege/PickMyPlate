@@ -29,6 +29,8 @@ export function SearchScreen({ navigation }: Props) {
     activeTab,
     setActiveTab,
     setSelectedDish,
+    isFavorite,
+    toggleFavorite,
   } = useApp();
 
   const filteredDishes = searchQuery
@@ -112,6 +114,8 @@ export function SearchScreen({ navigation }: Props) {
                     setSelectedDish(dish);
                     navigation.navigate('DishDetail');
                   }}
+                  isFavorited={isFavorite(dish)}
+                  onHeartPress={() => toggleFavorite(dish)}
                 />
               </View>
             ))}

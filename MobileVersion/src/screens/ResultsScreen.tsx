@@ -22,6 +22,8 @@ export function ResultsScreen({ navigation }: Props) {
     selectedResultFilters,
     toggleResultFilter,
     setSelectedDish,
+    isFavorite,
+    toggleFavorite,
   } = useApp();
 
   const recommended = resultsDishes.filter((d) => d.section === 'recommended');
@@ -89,6 +91,8 @@ export function ResultsScreen({ navigation }: Props) {
                 price={dish.price}
                 spiceLevel={dish.spiceLevel}
                 onPress={() => openDish(dish)}
+                isFavorited={isFavorite(dish)}
+                onHeartPress={() => toggleFavorite(dish)}
               />
             </View>
           ))}
@@ -103,6 +107,8 @@ export function ResultsScreen({ navigation }: Props) {
                 price={dish.price}
                 spiceLevel={dish.spiceLevel}
                 onPress={() => openDish(dish)}
+                isFavorited={isFavorite(dish)}
+                onHeartPress={() => toggleFavorite(dish)}
               />
             </View>
           ))}
@@ -117,6 +123,8 @@ export function ResultsScreen({ navigation }: Props) {
                 price={dish.price}
                 spiceLevel={dish.spiceLevel}
                 onPress={() => openDish(dish)}
+                isFavorited={isFavorite(dish)}
+                onHeartPress={() => toggleFavorite(dish)}
               />
             </View>
           ))}

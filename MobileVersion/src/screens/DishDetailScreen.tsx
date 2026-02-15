@@ -14,7 +14,8 @@ type Props = {
 };
 
 export function DishDetailScreen({ navigation }: Props) {
-  const { selectedDish, activeTab, setActiveTab } = useApp();
+  const { selectedDish, activeTab, setActiveTab, isFavorite, toggleFavorite } = useApp();
+  const isFavorited = selectedDish ? isFavorite(selectedDish) : false;
 
   if (!selectedDish) {
     return null;
@@ -40,7 +41,17 @@ export function DishDetailScreen({ navigation }: Props) {
 
         <View style={styles.titleRow}>
           <Text style={styles.dishName}>{selectedDish.name}</Text>
-          <Ionicons name="heart-outline" size={24} color="#374151" />
+          <TouchableOpacity
+            onPress={() => toggleFavorite(selectedDish)}
+            hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+            style={styles.heartButton}
+          >
+            <Ionicons
+              name={isFavorited ? 'heart' : 'heart-outline'}
+              size={24}
+              color={isFavorited ? '#000' : '#374151'}
+            />
+          </TouchableOpacity>
         </View>
 
         <View style={styles.priceRow}>
@@ -167,6 +178,9 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#000',
     flex: 1,
+  },
+  heartButton: {
+    padding: 4,
   },
   priceRow: {
     flexDirection: 'row',

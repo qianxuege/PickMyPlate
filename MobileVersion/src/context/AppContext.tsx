@@ -23,6 +23,8 @@ interface AppContextType extends AppState {
   setActiveTab: (tab: TabType) => void;
   setSelectedDish: (dish: Dish | null) => void;
   setFavoriteDishes: (dishes: Dish[] | ((prev: Dish[]) => Dish[])) => void;
+  isFavorite: (dish: Dish) => boolean;
+  toggleFavorite: (dish: Dish) => void;
 }
 
 const defaultState: AppState = {
@@ -92,6 +94,20 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setFavoriteDishesState((prev) => (typeof dishes === 'function' ? dishes(prev) : dishes));
   }, []);
 
+  const isFavorite = useCallback((dish: Dish) => {
+    return favoriteDishes.some((d) => d.name === dish.name);
+  }, [favoriteDishes]);
+
+  const toggleFavorite = useCallback((dish: Dish) => {
+    setFavoriteDishesState((prev) => {
+      const isInFavorites = prev.some((d) => d.name === dish.name);
+      if (isInFavorites) {
+        return prev.filter((d) => d.name !== dish.name);
+      }
+      return [...prev, { ...dish, restaurant: dish.restaurant || 'Noodlehead' }];
+    });
+  }, []);
+
   const value: AppContextType = {
     tastePrefs,
     dietary,
@@ -111,6 +127,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setActiveTab,
     setSelectedDish,
     setFavoriteDishes,
+    isFavorite,
+    toggleFavorite,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
